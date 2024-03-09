@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <link rel="icon" href="icon.jpeg" type="ashwin.jpeg">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
+    <title>Imayam Fabric</title>
+</head>
+<body style="background-color: rgb(255, 255, 255); color: black;">
+    <div id="navbar" >
+        <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: black;">
+            <div class="container-fluid">
+                <div>
+                    <a class="navbar-brand" href="#">
+                        <img src="icon.jpeg" alt="Avatar Logo" style="width:40px; margin-left: 10px;" class="rounded-pill"> 
+                      </a>
+                </div>
+              <a class="navbar-brand " href="#" id="text-style">Imayam Fabric</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Shop Now</a>
+                  </li>  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">email</a></li>
+                      <li><a class="dropdown-item" href="#">phone</a></li>
+                      <li><a class="dropdown-item" href="#">linked in</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </div>
+
+
+
+
+    <!--home-->
+
+    <div class="container-fluid mt-3" ">
+        <div class="row">
+          <div class="col-sm-6 p-3  text-center  justify-content-center mt-2">
+            <div>
+                <img class="img-fluid" src="ii.jpeg" alt="" style="padding-left: 40px; height: 50%;width: 40%; margin-top: -10px;"  >
+            </div>
+            <h1 class="mt-3" id="text-style">Imayam Fabric</h1>
+            <h1 class="mt-2">Outlet</h1>
+            <p class="mt-3">Customized according to your preferences</p>
+            <p class="mt-3">Finest traditional dresses, sarees, bridal wears, & more from all over India</p>
+            <div class="justify-content-between">
+                <button class="btn btn-success  m-3 bg-light bg-dark text-light"  ><b><a style="text-decoration: none;" class="text-light" href="#product"> Shop Now >> </a></b></button>
+            </div>
+            
+          </div>
+          <div class="col-sm-6 p-3 " >
+            <div>
+                <img class="img-fluid" src="i.jpeg" alt="" style="padding-left: 40px; height: 90%;width: 90%; margin-top: -10px;">
+            </div>
+           
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+      <h1  class="text-uppercase justify-content-center text-center" id="product" ><b>Product</b></h1><br>
+        <!-- Button to toggle product form visibility -->
+        <button type="button" class="btn btn-primary mb-3" id="toggle-form-btn" onclick="toggleProductForm()"></button>
+        <!-- Product form -->
+        <form id="product-form" style="display: none;">
+            <div class="form-group">
+                <label for="product-name">Product Name</label>
+                <input type="text" class="form-control" id="product-name" placeholder="Enter product name" required>
+            </div>
+            <div class="form-group">
+                <label for="product-price">Price</label>
+                <input type="number" class="form-control" id="product-price" placeholder="Enter price" required>
+            </div>
+            <div class="form-group">
+                <label for="product-details">Details</label>
+                <textarea class="form-control" id="product-details" placeholder="Enter product details" required></textarea>
+            </div><br>
+            <div class="form-group">
+                <label for="product-image" class="">Image</label>
+                <input type="file" class="form-control-file" id="product-image" accept="image/*" required>
+            </div><br>
+            <button type="button" class="btn btn-primary" onclick="addProduct()">Add Product</button>
+        </form>
+    
+        <div class="mt-3 row" id="product-container"></div>
+    </div>
+    
+
+    <div class="container-fluid mt-3 mb-5" style="margin-bottom: 50px;" >
+      
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 top justify-content-center text-center mt-5 ">
+            <img class="img-fluid" src="img1.webp" alt="" style="height: 70%; width: 70%;">
+            <h4 class="text-uppercase text-center ">beetel b11</h4>
+            <h6 class="text-center ">$ 456</h6>
+            <p class="text-center" >nvfhgdjghtej</p>
+            <p class="icon text-center">
+              <span><i class="far fa-heart"></i></span>
+              <span><i id="gap" class="far fa-share-square" title="Share"></i></span>
+              <span><i id="gap" class="fas fa-shopping-basket"></i></span>
+           </p>
+            <div class="text-center mb-5">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-success">Add to Cart</button>
+            </div>
+        </div>
+
+
+         <div class="col-sm-6 col-lg-3  top justify-content-center text-center mt-5">
+            <img class="img-fluid" src="img1.webp" alt="" style="height: 70%; width: 70%;">
+            <h4 class="text-uppercase text-center ">beetel b11</h4>
+            <h6 class="text-center ">$ 456</h6>
+            <p class="text-center" >nvfhgdjghtej</p>
+            <p class="icon text-center">
+              <span><i class="far fa-heart"></i></span>
+              <span><i id="gap" class="far fa-share-square" title="Share"></i></span>
+              <span><i id="gap" class="fas fa-shopping-basket"></i></span>
+           </p>
+            <div class="text-center mb-5">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-success">Add to Cart</button>
+            </div>
+        </div>
+
+
+         <div class="col-sm-6 top col-lg-3  justify-content-center text-center mt-5 ">
+            <img class="img-fluid" src="img1.webp" alt="" style="height: 70%; width: 70%;">
+            <h4 class="text-uppercase text-center ">beetel b11</h4>
+            <h6 class="text-center ">$ 456</h6>
+            <p class="text-center" >nvfhgdjghtej</p>
+            <p class="icon text-center">
+              <span><i class="far fa-heart"></i></span>
+              <span><i id="gap" class="far fa-share-square" title="Share"></i></span>
+              <span><i id="gap" class="fas fa-shopping-basket"></i></span>
+           </p>
+            <div class="text-center mb-5">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-success">Add to Cart</button>
+            </div>
+        </div>
+
+
+
+         <div class="col-sm-6 col-lg-3  top justify-content-center text-center  mt-5">
+            <img class="img-fluid" src="img1.webp" alt="" style="height: 70%; width: 70%;">
+            <h4 class="text-uppercase text-center ">beetel b11</h4>
+            <h6 class="text-center ">$ 456</h6>
+            <p class="text-center" >nvfhgdjghtej</p>
+            <p class="icon text-center">
+              <span><i class="far fa-heart"></i></span>
+              <span><i id="gap" class="far fa-share-square" title="Share"></i></span>
+              <span><i id="gap" class="fas fa-shopping-basket"></i></span>
+           </p>
+            <div class="text-center mb-5">
+              <button class="btn btn-primary">Buy Now</button>
+              <button class="btn btn-success">Add to Cart</button>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+
+     
+
+    <div class="container-fluid mt-5" style="margin-top: 100px;" >
+      <div class="row">
+        <div class="col-sm-6 p-3 bg-light text-white mt-5">
+          <iframe class="position-relative rounded w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7829707981973!2d77.33140077452151!3d11.129535052582368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba90792cc705737%3A0xabfdfb1e8d9d916d!2sImayam%20Textiles!5e0!3m2!1sen!2sin!4v1708513389180!5m2!1sen!2sin"
+          style="min-height: 350px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!--map-->
+
+        <div class="col-sm-6 p-3 top mt-5">
+          <h4 class="text-uppercase align-content-center justify-content-center " >Get Touch With Us</h4>
+              <div class="wow fadeInUp" data-wow-delay="0.2s">
+                  <form action="insert.php" method="post">
+                      <div class="row g-3">
+                          <div class="col-md-6">
+                              <div class="form-floating">
+                                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" >
+                                  <label for="name">Name</label>
+                                  <span id="nameError"  style="color: aliceblue;"></span>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="form-floating">
+                                  <input type="number" class="form-control" id="phone" name="phone" placeholder="Your phone" >
+                                  <label for="phone">Phone</label>
+                                  <span id="phoneError"  style="color: aliceblue;"></span>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="form-floating">
+                                  <input type="number" class="form-control" id="email" name="email" placeholder="email" maxlength="" >
+                                  <label for="email">Email</label>
+                                  <span id="emailError"  style="color: aliceblue;"></span>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="form-floating">
+                                  <textarea class="form-control" placeholder="Leave a problem here" id="Message" name="Message" style="height: 100px" ></textarea>
+                                  <label for="problem">Message</label>
+                                  <span id="problemError"  style="color: aliceblue;"></span>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <button class="btn btn-primary w-100 py-3" type="submit" value="submit" onclick="validateForm()" >Send Message</button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div><!--form-->
+
+
+
+
+
+
+<footer  style="margin-top: 90px;background-color: rgb(195, 211, 209);">
+    <div class="container-fluid mt-5" >
+      <div class="row">
+        <div class="col-sm-6  col-lg-3 p-5 ">
+          <h3>Imayam Fabric</h3><br>
+          <p>Customized according to your preferences. Finest traditional dresses, sarees, bridal wears, & more from all over India</p>
+
+        </div>
+        <div class="col-sm-6  col-lg-3 pt-5 justify-content-center text-center ">
+          <h3>Company</h3><br>
+             <p id="p">Home</p>
+             <p id="p">About</p>
+             <p id="p">Shop Now</p>
+             <p id="p">Contact Us</p>
+     
+  
+        </div>
+        <div class="col-sm-6  col-lg-3 pt-5 justify-content-center text-center">
+          <h3>Support</h3><br>
+             <p id="p">Help Center</p>
+             <p id="p">Ask Question</p>
+             <p id="p">Privacy policy</p>
+             <p id="p">Terms & Condition</p>
+
+        </div>
+        <div class="col-sm-6  col-lg-3 pt-5 justify-content-center text-center">
+          <h3>Location</h3><br>
+            <p id="p">Tirupur</p>
+            <p id="p">Coimbatore</p>
+            <p id="p">Chennai</p>
+            <p id="p">Madurai</p>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+    
+</body>
+</html>

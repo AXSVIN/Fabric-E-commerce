@@ -1,0 +1,28 @@
+#center
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#gap{
+    padding-left: 30px;
+}
+
+.top
+{
+    margin-top: 5px;
+}
+
+#p
+{
+        line-height:.6;
+
+}
+
+.mt
+{
+    margin-top: 150%;
+}
+
+
